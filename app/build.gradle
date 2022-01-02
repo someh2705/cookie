@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 apply plugin: 'kotlin-kapt'
@@ -38,9 +39,11 @@ android {
 }
 
 dependencies {
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def lifecycle_version = "2.4.0"
     def hilt_version = "2.40.1"
     def retrofit_version = "2.9.0"
+    def nav_version = "2.3.5"
 
     // Ktx
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -75,4 +78,8 @@ dependencies {
 
     // Coil
     implementation "io.coil-kt:coil:1.4.0"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 }
