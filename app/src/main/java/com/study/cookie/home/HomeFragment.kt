@@ -10,9 +10,9 @@ import timber.log.Timber
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onCreateView() {
+        super.onCreateView()
 
-        Timber.d("HomeFragment onViewCreated")
+        Timber.d("onCreateView")
     }
 }

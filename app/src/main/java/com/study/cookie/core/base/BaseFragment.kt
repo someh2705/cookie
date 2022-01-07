@@ -22,7 +22,11 @@ abstract class BaseFragment<VB : ViewBinding>(
         savedInstanceState: Bundle?
     ): View {
         _binding = inflate.invoke(inflater, container, false)
-
+        onCreateView()
         return binding.root
+    }
+
+    open fun onCreateView() {
+
     }
 }
